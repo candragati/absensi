@@ -1,0 +1,176 @@
+# -*- coding: utf-8 -*-
+
+# Form implementation generated from reading ui file 'reportPeriode.ui'
+#
+# Created: Wed Feb 22 08:53:38 2017
+#      by: PyQt4 UI code generator 4.10.4
+#
+# WARNING! All changes made in this file will be lost!
+
+from PyQt4 import QtCore, QtGui
+
+try:
+    _fromUtf8 = QtCore.QString.fromUtf8
+except AttributeError:
+    def _fromUtf8(s):
+        return s
+
+try:
+    _encoding = QtGui.QApplication.UnicodeUTF8
+    def _translate(context, text, disambig):
+        return QtGui.QApplication.translate(context, text, disambig, _encoding)
+except AttributeError:
+    def _translate(context, text, disambig):
+        return QtGui.QApplication.translate(context, text, disambig)
+
+class Ui_MainWindow(object):
+    def setupUi(self, MainWindow):
+        MainWindow.setObjectName(_fromUtf8("MainWindow"))
+        MainWindow.resize(800, 533)
+        self.centralwidget = QtGui.QWidget(MainWindow)
+        self.centralwidget.setObjectName(_fromUtf8("centralwidget"))
+        self.gridLayout_2 = QtGui.QGridLayout(self.centralwidget)
+        self.gridLayout_2.setObjectName(_fromUtf8("gridLayout_2"))
+        self.gridLayout = QtGui.QGridLayout()
+        self.gridLayout.setObjectName(_fromUtf8("gridLayout"))
+        self.label = QtGui.QLabel(self.centralwidget)
+        sizePolicy = QtGui.QSizePolicy(QtGui.QSizePolicy.Maximum, QtGui.QSizePolicy.Preferred)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.label.sizePolicy().hasHeightForWidth())
+        self.label.setSizePolicy(sizePolicy)
+        self.label.setObjectName(_fromUtf8("label"))
+        self.gridLayout.addWidget(self.label, 0, 0, 1, 1)
+        self.dateEditAwal = QtGui.QDateEdit(self.centralwidget)
+        sizePolicy = QtGui.QSizePolicy(QtGui.QSizePolicy.Maximum, QtGui.QSizePolicy.Fixed)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.dateEditAwal.sizePolicy().hasHeightForWidth())
+        self.dateEditAwal.setSizePolicy(sizePolicy)
+        self.dateEditAwal.setCalendarPopup(True)
+        self.dateEditAwal.setObjectName(_fromUtf8("dateEditAwal"))
+        self.gridLayout.addWidget(self.dateEditAwal, 0, 1, 1, 1)
+        self.tableWidget = QtGui.QTableWidget(self.centralwidget)
+        self.tableWidget.setEditTriggers(QtGui.QAbstractItemView.NoEditTriggers)
+        self.tableWidget.setAlternatingRowColors(True)
+        self.tableWidget.setSelectionMode(QtGui.QAbstractItemView.SingleSelection)
+        self.tableWidget.setSelectionBehavior(QtGui.QAbstractItemView.SelectRows)
+        self.tableWidget.setObjectName(_fromUtf8("tableWidget"))
+        self.tableWidget.setColumnCount(3)
+        self.tableWidget.setRowCount(2)
+        item = QtGui.QTableWidgetItem()
+        self.tableWidget.setVerticalHeaderItem(0, item)
+        item = QtGui.QTableWidgetItem()
+        self.tableWidget.setVerticalHeaderItem(1, item)
+        item = QtGui.QTableWidgetItem()
+        self.tableWidget.setHorizontalHeaderItem(0, item)
+        item = QtGui.QTableWidgetItem()
+        self.tableWidget.setHorizontalHeaderItem(1, item)
+        item = QtGui.QTableWidgetItem()
+        self.tableWidget.setHorizontalHeaderItem(2, item)
+        item = QtGui.QTableWidgetItem()
+        brush = QtGui.QBrush(QtGui.QColor(0, 0, 255))
+        brush.setStyle(QtCore.Qt.NoBrush)
+        item.setBackground(brush)
+        brush = QtGui.QBrush(QtGui.QColor(85, 0, 255))
+        brush.setStyle(QtCore.Qt.NoBrush)
+        item.setForeground(brush)
+        self.tableWidget.setItem(0, 0, item)
+        self.gridLayout.addWidget(self.tableWidget, 1, 0, 1, 4)
+        self.pushButton = QtGui.QPushButton(self.centralwidget)
+        sizePolicy = QtGui.QSizePolicy(QtGui.QSizePolicy.Fixed, QtGui.QSizePolicy.Fixed)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.pushButton.sizePolicy().hasHeightForWidth())
+        self.pushButton.setSizePolicy(sizePolicy)
+        self.pushButton.setStyleSheet(_fromUtf8(""))
+        self.pushButton.setFlat(False)
+        self.pushButton.setObjectName(_fromUtf8("pushButton"))
+        self.gridLayout.addWidget(self.pushButton, 0, 2, 1, 1)
+        self.gridLayout_2.addLayout(self.gridLayout, 0, 0, 1, 1)
+        MainWindow.setCentralWidget(self.centralwidget)
+        self.toolBar = QtGui.QToolBar(MainWindow)
+        self.toolBar.setObjectName(_fromUtf8("toolBar"))
+        MainWindow.addToolBar(QtCore.Qt.TopToolBarArea, self.toolBar)
+        self.statusBar = QtGui.QStatusBar(MainWindow)
+        self.statusBar.setObjectName(_fromUtf8("statusBar"))
+        MainWindow.setStatusBar(self.statusBar)
+        self.actionExport_Excel = QtGui.QAction(MainWindow)
+        icon = QtGui.QIcon()
+        icon.addPixmap(QtGui.QPixmap(_fromUtf8(":/icon/DESIGN/icon/32x32/file_extension_xls.png")), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        self.actionExport_Excel.setIcon(icon)
+        self.actionExport_Excel.setObjectName(_fromUtf8("actionExport_Excel"))
+        self.actionShow_Data = QtGui.QAction(MainWindow)
+        icon1 = QtGui.QIcon()
+        icon1.addPixmap(QtGui.QPixmap(_fromUtf8(":/icon/DESIGN/icon/32x32/application_form_magnify.png")), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        self.actionShow_Data.setIcon(icon1)
+        self.actionShow_Data.setObjectName(_fromUtf8("actionShow_Data"))
+        self.actionKeluar = QtGui.QAction(MainWindow)
+        icon2 = QtGui.QIcon()
+        icon2.addPixmap(QtGui.QPixmap(_fromUtf8(":/icon/DESIGN/icon/32x32/door_in.png")), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        self.actionKeluar.setIcon(icon2)
+        self.actionKeluar.setObjectName(_fromUtf8("actionKeluar"))
+        self.actionGrafik = QtGui.QAction(MainWindow)
+        icon3 = QtGui.QIcon()
+        icon3.addPixmap(QtGui.QPixmap(_fromUtf8(":/icon/DESIGN/icon/32x32/chart_bar.png")), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        self.actionGrafik.setIcon(icon3)
+        self.actionGrafik.setObjectName(_fromUtf8("actionGrafik"))
+        self.actionTambah_User = QtGui.QAction(MainWindow)
+        icon4 = QtGui.QIcon()
+        icon4.addPixmap(QtGui.QPixmap(_fromUtf8(":/icon/DESIGN/icon/32x32/add.png")), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        self.actionTambah_User.setIcon(icon4)
+        self.actionTambah_User.setObjectName(_fromUtf8("actionTambah_User"))
+        self.actionHapus = QtGui.QAction(MainWindow)
+        icon5 = QtGui.QIcon()
+        icon5.addPixmap(QtGui.QPixmap(_fromUtf8(":/icon/DESIGN/icon/32x32/delete.png")), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        self.actionHapus.setIcon(icon5)
+        self.actionHapus.setObjectName(_fromUtf8("actionHapus"))
+        self.actionReport_Periode = QtGui.QAction(MainWindow)
+        self.actionReport_Periode.setIcon(icon3)
+        self.actionReport_Periode.setObjectName(_fromUtf8("actionReport_Periode"))
+        self.toolBar.addAction(self.actionTambah_User)
+        self.toolBar.addAction(self.actionHapus)
+
+        self.retranslateUi(MainWindow)
+        QtCore.QMetaObject.connectSlotsByName(MainWindow)
+
+    def retranslateUi(self, MainWindow):
+        MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow", None))
+        self.label.setText(_translate("MainWindow", "Tanggal :", None))
+        self.tableWidget.setSortingEnabled(True)
+        item = self.tableWidget.verticalHeaderItem(0)
+        item.setText(_translate("MainWindow", "New Row", None))
+        item = self.tableWidget.verticalHeaderItem(1)
+        item.setText(_translate("MainWindow", "New Row", None))
+        item = self.tableWidget.horizontalHeaderItem(0)
+        item.setText(_translate("MainWindow", "New Column", None))
+        item = self.tableWidget.horizontalHeaderItem(1)
+        item.setText(_translate("MainWindow", "New Column", None))
+        item = self.tableWidget.horizontalHeaderItem(2)
+        item.setText(_translate("MainWindow", "New Column", None))
+        __sortingEnabled = self.tableWidget.isSortingEnabled()
+        self.tableWidget.setSortingEnabled(False)
+        item = self.tableWidget.item(0, 0)
+        item.setText(_translate("MainWindow", "test", None))
+        self.tableWidget.setSortingEnabled(__sortingEnabled)
+        self.pushButton.setText(_translate("MainWindow", "Report Periode", None))
+        self.toolBar.setWindowTitle(_translate("MainWindow", "toolBar", None))
+        self.actionExport_Excel.setText(_translate("MainWindow", "Export Excel", None))
+        self.actionShow_Data.setText(_translate("MainWindow", "Show Data", None))
+        self.actionKeluar.setText(_translate("MainWindow", "Keluar", None))
+        self.actionGrafik.setText(_translate("MainWindow", "Grafik", None))
+        self.actionTambah_User.setText(_translate("MainWindow", "Tambah User", None))
+        self.actionHapus.setText(_translate("MainWindow", "Hapus", None))
+        self.actionReport_Periode.setText(_translate("MainWindow", "Report Periode", None))
+
+import icon_rc
+
+if __name__ == "__main__":
+    import sys
+    app = QtGui.QApplication(sys.argv)
+    MainWindow = QtGui.QMainWindow()
+    ui = Ui_MainWindow()
+    ui.setupUi(MainWindow)
+    MainWindow.show()
+    sys.exit(app.exec_())
+

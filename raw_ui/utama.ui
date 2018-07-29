@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>787</width>
+    <height>508</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QGridLayout" name="gridLayout_2">
+    <item row="0" column="0">
+     <widget class="QMdiArea" name="mdiArea">
+      <property name="viewMode">
+       <enum>QMdiArea::TabbedView</enum>
+      </property>
+      <property name="documentMode">
+       <bool>true</bool>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="0">
+     <widget class="QLabel" name="labelJam">
+      <property name="font">
+       <font>
+        <family>Lucida Console</family>
+        <pointsize>14</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>TextLabel</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QToolBar" name="toolBar">
+   <property name="windowTitle">
+    <string>toolBar</string>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="actionAbsen"/>
+   <addaction name="actionAdministrator"/>
+  </widget>
+  <action name="actionAdministrator">
+   <property name="icon">
+    <iconset resource="../../icon.qrc">
+     <normaloff>:/icon/DESIGN/icon/32x32/premium_support.png</normaloff>:/icon/DESIGN/icon/32x32/premium_support.png</iconset>
+   </property>
+   <property name="text">
+    <string>Administrator</string>
+   </property>
+  </action>
+  <action name="actionExcel">
+   <property name="icon">
+    <iconset resource="../../icon.qrc">
+     <normaloff>:/icon/DESIGN/icon/32x32/file_extension_xls.png</normaloff>:/icon/DESIGN/icon/32x32/file_extension_xls.png</iconset>
+   </property>
+   <property name="text">
+    <string>Excel</string>
+   </property>
+  </action>
+  <action name="actionLihatData">
+   <property name="icon">
+    <iconset resource="../../icon.qrc">
+     <normaloff>:/icon/DESIGN/icon/32x32/eye.png</normaloff>:/icon/DESIGN/icon/32x32/eye.png</iconset>
+   </property>
+   <property name="text">
+    <string>LihatData</string>
+   </property>
+  </action>
+  <action name="actionBatal">
+   <property name="icon">
+    <iconset resource="../../icon.qrc">
+     <normaloff>:/icon/DESIGN/icon/32x32/cancel.png</normaloff>:/icon/DESIGN/icon/32x32/cancel.png</iconset>
+   </property>
+   <property name="text">
+    <string>Batal</string>
+   </property>
+  </action>
+  <action name="actionAbsen">
+   <property name="icon">
+    <iconset resource="../../icon.qrc">
+     <normaloff>:/icon/DESIGN/icon/32x32/user.png</normaloff>:/icon/DESIGN/icon/32x32/user.png</iconset>
+   </property>
+   <property name="text">
+    <string>Absen</string>
+   </property>
+  </action>
+ </widget>
+ <resources>
+  <include location="../../icon.qrc"/>
+ </resources>
+ <connections/>
+</ui>
