@@ -57,7 +57,17 @@ class Main(QtGui.QMainWindow,menuShift_ui.Ui_MainWindow):
         self.actionBatal.triggered.connect(self.formNormal)
         self.lineEditKodeShift.returnPressed.connect(self.onKodeShiftEnter)
         self.comboBoxHari.currentIndexChanged.connect(self.onComboHari)
+        self.tableWidgetShift.doubleClicked.connect(self.tabelShiftEdit)
 
+    def tabelShiftEdit(self):
+        a = self.tableWidgetShift.currentRow()
+        kode_shift = self.tableWidgetShift.item(a,0).text()
+        keterangan = self.tableWidgetShift.item(a,1).text()
+        self.lineEditKodeShift.setText(kode_shift)
+        self.lineEditDept.setText(keterangan)
+        self.comboBoxHari.setEnabled(True)
+        self.comboBoxHari.setFocus()
+        
 
     def onComboHari(self):
         hari = int(self.comboBoxHari.currentIndex())+1
@@ -102,6 +112,8 @@ class Main(QtGui.QMainWindow,menuShift_ui.Ui_MainWindow):
             self.comboBoxHari.showPopup()
 
     def onTambah(self):
+        self.lineEditKodeShift.clear()
+        self.lineEditDept.clear()
         self.lineEditKodeShift.setEnabled(True)
         self.lineEditKodeShift.setFocus()
         self.tableWidget.setEnabled(False)

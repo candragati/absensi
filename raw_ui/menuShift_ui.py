@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'menuShift.ui'
 #
-# Created: Sun Jul 29 16:14:10 2018
+# Created: Mon Jul 30 05:17:59 2018
 #      by: PyQt4 UI code generator 4.10.4
 #
 # WARNING! All changes made in this file will be lost!
@@ -103,6 +103,9 @@ class Ui_MainWindow(object):
         self.gridLayout_3.addLayout(self.gridLayout_4, 1, 0, 1, 5)
         self.gridLayout.addLayout(self.gridLayout_3, 0, 0, 1, 3)
         self.tableWidget = QtGui.QTableWidget(self.centralwidget)
+        self.tableWidget.setEditTriggers(QtGui.QAbstractItemView.NoEditTriggers)
+        self.tableWidget.setTabKeyNavigation(False)
+        self.tableWidget.setAlternatingRowColors(True)
         self.tableWidget.setObjectName(_fromUtf8("tableWidget"))
         self.tableWidget.setColumnCount(2)
         self.tableWidget.setRowCount(6)
